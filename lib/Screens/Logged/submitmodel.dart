@@ -12,9 +12,9 @@ class Data {
     print('$name -- $location -- $number -- $lga -- $category');
   }
 
-  Future send(BuildContext context) async {
-    // var link = "https://deployment-fmb.herokuapp.com/review/${lga}";
-    var link = "https://deployment-fmb.herokuapp.com/review/Agege";
+  Future send() async {
+    var link = "https://deployment-fmb.herokuapp.com/review/$lga";
+    // var link = "https://deployment-fmb.herokuapp.com/review/Agege";
     Map databody = {
       'Category': '$category',
       'Name': '$name',
@@ -23,17 +23,9 @@ class Data {
     };
     try {
       var tosend = await http.post(link, body: databody);
-      return showDialog(
-          context: context,
-          child: AlertDialog(
-            content: Text('Success'),
-          ));
+      return tosend.statusCode;
     } catch (e) {
-      return showDialog(
-          context: context,
-          child: AlertDialog(
-            content: Text('Failed'),
-          ));
+      print(e);
     }
   }
 }

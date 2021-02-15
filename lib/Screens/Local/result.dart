@@ -31,7 +31,6 @@ class _BusinessState extends State<Business> {
           businessdata.add(collected);
         }
         businessdata.add(DataField(name: 'empty'));
-        return businessdata;
       }
 
       return businessdata;

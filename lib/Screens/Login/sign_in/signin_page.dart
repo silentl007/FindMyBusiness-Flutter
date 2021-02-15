@@ -3,16 +3,6 @@ import 'package:FMB/Screens/Logged/submit.dart';
 import 'package:flutter/material.dart';
 import 'package:FMB/Screens/Login/sign_in/signin_button.dart';
 import 'package:FMB/Screens/Login/sign_in/socialsigninbutton.dart';
-/* Column() widget has two properties that determines the verticality and horizontality of its widgets
--- maxAxisAlignment: responsible for verticality
--- crossAxisAlignment: responsible for horizontality
-- CrossAxisAlignment.stretch overrides the default width of any widget and makes it stretch to the max width of its parent widget
- 
- -- Padding() is a widget that takes only one property padding, useful for minimalistic touch
- -- Scaffold() widget has backgroundcolor property
- -- Images.asset('image location') is used to load images added to assets
- -- Opacity() is a widget that determines the level of visibilty of its child widgets
- */
 
 class SignInPage extends StatelessWidget {
   @override
@@ -36,7 +26,7 @@ class SignInPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment
                 .stretch, // stretched all widgets to the max width
             mainAxisAlignment:
-                MainAxisAlignment.center, // moved all widgets to the center
+                MainAxisAlignment.center, 
             children: <Widget>[
               Text(
                 'Sign In',
